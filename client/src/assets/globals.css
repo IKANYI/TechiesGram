@@ -9,6 +9,8 @@
   --color-primary-lighter: #0171d3;
   --color-primary-white: #ffffff;
   --color-primary-black: #2c2836;
+  --color-black: #000000;
+  --color-black-lighter: #696969;
 }
 html {
   font-size: 62.5%;
