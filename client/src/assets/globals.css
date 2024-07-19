@@ -18,3 +18,45 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
 }
+.main-sign {
+  display: flex;
+  background-color: var(--color-primary);
+  height: 100vh;
+  justify-content: center;
+}
+.signup {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-primary-white);
+  width: 50%;
+  max-width: 23rem;
+  height: 90%;
+  overflow: hidden;
+  margin-top: 2rem;
+  border-radius: 0.8rem;
+  align-items: center;
+}
+.signup h2 {
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem;
+  gap: 0.7rem;
+}
+.signup-input {
+  display: inline-block;
+  width: 95%;
+  align-self: center;
+  padding: 0.4rem;
+}
+.sign-button {
+  background-color: var(--color-primary);
+  padding: 0.4rem;
+  border: none;
+  border-radius: 0.5rem;
+  width: 95%;
+  align-self: center;
+}
