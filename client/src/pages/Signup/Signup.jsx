@@ -149,7 +149,7 @@ function Signup() {
             onChange={formik.handleChange}
             value={formik.values.confPassword}
           />
-          <button type="submit" className="sign-button">
+          <button type="submit" className="signup-button">
             submit
           </button>
         </form>

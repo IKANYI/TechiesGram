@@ -52,11 +52,48 @@ body {
   align-self: center;
   padding: 0.4rem;
 }
-.sign-button {
+.signup-button {
   background-color: var(--color-primary);
   padding: 0.4rem;
   border: none;
   border-radius: 0.5rem;
   width: 95%;
   align-self: center;
+}
+.login-main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  height: 100vh;
+}
+.login {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: var(--color-primary-white);
+  height: 60%;
+  margin-top: 2rem;
+  border-radius: 0.6rem;
+  align-items: center;
+  max-width: 25rem;
+}
+.login h2 {
+  text-transform: capitalize;
+  padding: 0.5rem;
+}
+.login input {
+  width: 90%;
+  display: inline-block;
+  padding: 0.4rem;
+  margin-bottom: 0.1rem;
+  margin-left: 0.6rem;
+}
+.sign-button {
+  display: inline-block;
+  width: 90%;
+  padding: 0.2em;
+  border-radius: 0.3em;
+  border: none;
+  margin: 1rem;
+  background-color: var(--color-primary);
 }

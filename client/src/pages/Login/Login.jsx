@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import toast from "react-simple-toasts";
+import "../../assets/globals.css";
 import * as Yup from "yup";
 
 function Login() {
@@ -62,34 +63,43 @@ function Login() {
     //validationSchema: validationSchema,
   });
   return (
-    <div className="login">
-      <h2 className="login-title">login</h2>
-      <div className="login-input">
-        <form onSubmit={formik.handleSubmit}>
-          <input
-            type="text"
-            placeholder="Email"
-            name="email"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.email && formik.errors.email && (
-            <p>{formik.errors.email}</p>
-          )}
-          <input
-            type="text"
-            placeholder="Password"
-            name="password"
-            value={formik.values.password}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.password && formik.errors.password && (
-            <p>{formik.errors.password}</p>
-          )}
-          <button type="submit">submit</button>
-        </form>
+    <div className="login-main">
+      <div className="login">
+        <h2 className="login-title">login</h2>
+        <div>
+          <form onSubmit={formik.handleSubmit}>
+            <input
+              className="login input"
+              type="text"
+              placeholder="Email"
+              name="email"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.email && formik.errors.email && (
+              <p>{formik.errors.email}</p>
+            )}
+            <input
+              className="login input"
+              type="text"
+              placeholder="Password"
+              name="password"
+              value={formik.values.password}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.password && formik.errors.password && (
+              <p>{formik.errors.password}</p>
+            )}
+            <button type="submit" className="sign-button">
+              submit
+            </button>
+          </form>
+          <p>
+            Don't have account? <a href="/signup">Signup</a>{" "}
+          </p>
+        </div>
       </div>
     </div>
   );
