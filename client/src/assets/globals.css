@@ -136,3 +136,46 @@ user-content {
   width: 90%;
   height: 10rem;
 }
+.post-main {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-primary);
+  height: 100vh;
+}
+.post-content {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  overflow: hidden;
+  border: gray solid;
+  padding: 0.5em;
+  background-color: var(--color-primary-white);
+  height: 40%;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+.posts-form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 1rem;
+}
+.post-text {
+  min-height: 4rem;
+  border: none;
+  border-style: dotted;
+}
+.post-button {
+  background-color: var(--color-primary);
+  color: var(--color-primary-white);
+  width: 6rem;
+  padding: 0.2rem 1rem;
+  border: none;
+  border-radius: 0.3rem;
+  transition: all 0.5s linear;
+  align-self: center;
+}
+.post-button:hover {
+  background-color: wheat;
+  color: var(--color-primary);
+}
