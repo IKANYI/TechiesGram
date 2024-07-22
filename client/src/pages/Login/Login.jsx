@@ -24,13 +24,14 @@ function Login() {
           "content-type": "application/json",
         },
         body: JSON.stringify(formValues),
+        credentials: "include",
       });
       console.log(response);
       const data = await response.json();
       console.log(data);
       if (data.success == true) {
         if (data.data.role == "user") {
-          navigate("/explore");
+          navigate("/post");
         } else {
           navigate("/admin");
         }
@@ -44,16 +45,6 @@ function Login() {
     }
   };
 
-  {
-    /*const validationSchema = Yup.object({
-    email: Yup.string("Email must be a string")
-      .email("invalid email")
-      .required("Please enter  email"),
-    password: Yup.string("Password must be a string").required(
-      "Please enter password",
-    ),
-  });*/
-  }
   const formik = new useFormik({
     initialValues: {
       email: "",

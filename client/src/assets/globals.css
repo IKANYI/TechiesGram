@@ -152,7 +152,6 @@ user-content {
   background-color: var(--color-primary-white);
   height: 40%;
   margin: 2rem;
-  border-radius: 0.5rem;
 }
 .posts-form {
   display: flex;

@@ -30,9 +30,9 @@ function Signup() {
       });
       console.log(response);
       const data = await response.json();
-      if (data.success == true) {
-        navigate("/login");
+      if (response.ok == true) {
         toast(data.message, { theme: "success" });
+        navigate("/login");
       } else {
         toast(data.message, { theme: "failure" });
       }
