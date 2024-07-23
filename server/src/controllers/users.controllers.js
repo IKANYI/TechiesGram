@@ -23,10 +23,40 @@ export const createUser = async (req, res) => {
   }
 };
 
+export const updateUser = async (req, res) => {
+  try {
+    const { firstName, lastName, email, phoneNumber, password, role } =
+      req.body;
+    const id = req.params.id;
+    const updateUser = await prisma.user.update({
+      where: { id: id },
+      firstName: firstName,
+      lastName: lastName,
+      email: email,
+      phoneNumber: phoneNumber,
+      password: password,
+      role: role,
+    });
+  } catch (e) {
+    res.status(500).json({ success: false, message: e.message });
+  }
+};
+
 export const getAllUsers = async (req, res) => {
   try {
     const user = await prisma.user.findMany();
     res.json(user);
+  } catch (e) {
+    res.status(500).json({ success: false, message: e.message });
+  }
+};
+export const deleteUser = async (req, res) => {
+  try {
+    const id = req.params.id;
+    const deleteuser = await prisma.user.delete({
+      where: { id: id },
+    });
+    res.status(200).json({ success: true, data: deleteuser });
   } catch (e) {
     res.status(500).json({ success: false, message: e.message });
   }

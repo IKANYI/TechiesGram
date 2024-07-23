@@ -19,7 +19,10 @@ function Post() {
         `https://api.cloudinary.com/v1_1/${cloudName}/upload`,
         payload,
       );
-      return response.data.secure_url;
+      const secure_url = response.data.secure_url;
+      const imageUrl = secure_url.replace("/upload/", "/upload/w_400/f_auto/");
+      console.log(imageUrl);
+      return imageUrl;
     } catch (err) {
       console.error(err);
       toast("Image upload failed. Please try again.", { theme: "failure" });
