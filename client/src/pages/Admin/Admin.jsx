@@ -1,14 +1,24 @@
 import React from "react";
-import ViewUsers from "./ViewUsers.jsx";
-import VievPosts from "./VievPosts.jsx";
 import { Link } from "react-router-dom";
+import VievPosts from "./VievPosts.jsx";
+import ViewUsers from "./ViewUsers.jsx";
 
 function Admin() {
   return (
-    <div className="main">
-      <p>Welcome to the admin</p>
-      <Link to="/viewUsers">View Users</Link>
-      <Link to="/viewPosts">View Posts</Link>
+    <div className="master">
+      <div className="main">
+        <div className="links">
+          <p>Welcome to the admin</p>
+          <Link to="/viewUsers">View Users</Link>
+          <Link to="/viewPosts">View Posts</Link>
+        </div>
+      </div>
+      <div className="components">
+        <VievPosts />
+      </div>
+      <div className="components">
+        <ViewUsers />
+      </div>
     </div>
   );
 }

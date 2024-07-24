@@ -8,6 +8,7 @@ import Signup from "./pages/Signup/Signup.jsx";
 import Admin from "./pages/Admin/Admin.jsx";
 import VievPosts from "./pages/Admin/VievPosts.jsx";
 import ViewUsers from "./pages/Admin/ViewUsers.jsx";
+import Footer from "./components/Footer.jsx";
 import "./assets/globals.css";
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/viewPosts" element={<VievPosts />} />
           <Route path="/viewUsers" element={<ViewUsers />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );

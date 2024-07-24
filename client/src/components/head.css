@@ -45,3 +45,22 @@
   align-items: center;
   justify-content: center;
 }
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to bottom, white, var(--color-primary));
+}
+.footer-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  font-size: 2rem;
+  padding: 1rem;
+}
+.copyright {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}

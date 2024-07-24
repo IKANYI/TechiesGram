@@ -4,3 +4,29 @@
 .posts-container {
   border: 1px solid gray;
 }
+.main {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  background-color: aqua;
+  height: 100vh;
+  gap: 4rem;
+  font-size: 3rem;
+}
+.main p {
+  text-transform: capitalize;
+}
+.main a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.master {
+  display: flex;
+}
+.components {
+  width: 20rem;
+  display: flex;
+  height: 50vh;
+  overflow: hidden;
+  margin: 3rem;
+}

@@ -13,15 +13,35 @@
   --color-black-lighter: #696969;
 }
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 body {
   font-family: "Open Sans", sans-serif;
 }
+.home-hero {
+  background: linear-gradient(to bottom, #030303, var(--color-primary));
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 0.5rem;
+  color: white;
+  text-align: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.home-hero a {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: white;
+  width: 7rem;
+  align-self: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+}
 .main-sign {
   display: flex;
   background-color: var(--color-primary);
-  height: 100vh;
+  height: 80vh;
   justify-content: center;
 }
 .signup {
@@ -64,7 +84,7 @@ body {
   display: flex;
   justify-content: center;
   background-color: var(--color-primary);
-  height: 100vh;
+  height: 80vh;
 }
 .login {
   display: flex;
